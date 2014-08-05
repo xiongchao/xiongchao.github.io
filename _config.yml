@@ -6,20 +6,20 @@ highlighter:      pygments
 permalink:        none
 
 # Setup
-title:            phocks
-tagline:          'guarding the henhouse'
-description:      'Some kind of blog written by Joshua Byrd.'
-url:              http://phocks.github.io/
+title:            熊超
+tagline:          'simon'
+description:      'Xiong Chao Blog'
+url:              http://xiongchao.github.io/
 baseurl:          '/'
 paginate:         5
-timezone:         Australia/Brisbane
+timezone:         China/Beijing
 
 author:
-  name:           'Joshua Byrd'
-  url:            https://twitter.com/phocks
+  name:           '熊超'
+  url:            http://weibo.com/u/1660456274
 
 # Custom vars
 version:          0.0.3
 
 github:
-  repo:           https://github.com/phocks/phocks.github.io
+  repo:           https://github.com/xiongchao/xiongchao.github.io
