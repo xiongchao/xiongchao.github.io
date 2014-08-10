@@ -3,7 +3,7 @@ layout: post
 title: Tmux安装使用说明
 ---
 
->“效率是做好工作的灵魂” 
+>“效率是做好工作的灵魂”
 > ― 切斯特菲尔德
 
 tmux是一个优秀的终端复用软件，类似GNU Screen，但来自于OpenBSD，采用BSD授权。使用它最直观的好处就是，通过一个终端登录远程主机并运行tmux后，在其中可以开启多个控制台而无需再“浪费”多余的终端来连接这台远程主机；当然其功能远不止于此。
@@ -15,7 +15,7 @@ tmux依赖libevent 2.0以上版本。
 
 ## 安装libevent
 
-    $ tar -zxvf libevent-2.0.21-stable.tar.gz 
+    $ tar -zxvf libevent-2.0.21-stable.tar.gz
     $ cd libevent-2.0.21-stable/
     $ ./configure
     $ make clean && make && sudo make install
@@ -79,3 +79,13 @@ tmux依赖libevent 2.0以上版本。
     $ tmux new -s session -d #在后台建立会话
     $ tmux ls #列出会话
     $ tmux attach -t session #进入某个会话
+
+## 鼠标模式
+
+    set -g mode-mouse on                           # 开启鼠标模式
+    set -g mouse-select-pane on                  # 鼠标可以选择面板
+    set -g mouse-resize-pane on                  # 鼠标拖动调整面板大小
+    set -g mouse-select-window on             # 鼠标选择面板
+
+注意：如果开启鼠标模式，xshell的用鼠标选择复制不能用，需要按住shift同时用鼠标选择复制，按住shift，按右键粘贴
+
