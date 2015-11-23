@@ -10,6 +10,7 @@ Phabricator是facebook开源的一款优秀的code review工具。Phabricator支
 ## 配置使用cpplint
 
 在git根目录加上.arclint文件，配置使用cpplint.py，内容如下
+
     {
         "linters": {
             "sample": {
@@ -23,17 +24,20 @@ Phabricator是facebook开源的一款优秀的code review工具。Phabricator支
 ## 配置使用gtest
 Phabricator只支持php的单元测试，如果需要使用gtest，需要自行配置。
 在git根目录加上.arcconfig文件，配置使用自定义unit engine。
+
     {
         "unit.engine": "MyUnitTestEngine",
         "load" : [ "arc_tool/lib" ]
     }
 
 在arc_tool/lib目录中新建__phutil_library_init__.php，内容如下:
+
     <?php
     phutil_register_library('my-unit-test-engine', __FILE__);
     ?>
 
 新建一个unit engine，arc_tool/lib/engine/MyUnitTestEngine.php，内容如下：
+
     <?php
 
     final class MyUnitTestEngine extends ArcanistUnitTestEngine {
@@ -67,17 +71,21 @@ Phabricator只支持php的单元测试，如果需要使用gtest，需要自行�
     ?>
 
 执行下面的两个命令来生成arc工具使用到的类
+
     /var/phabricator/libphutil/scripts/phutil_rebuild_map.php arc_tool/lib
     arc liberate
 
 ## 测试
 
 测试cpplint
+
     arc lint
 
 测试gtest
+
     arc unit
 
 发code review,自动会运行cpplint和gtest
+
     arc diff
 
