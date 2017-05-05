@@ -1,4 +1,7 @@
-# 句子表示
+---
+layout: post
+title: 句子表示
+---
 
 ## Distributed Representations of Sentences and Documents
 
