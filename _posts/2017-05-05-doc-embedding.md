@@ -10,7 +10,7 @@ title: 句子表示
 * 训练阶段，类似word2vec，会学习paragraph和word对应的embedding，学习的目标是下一个词
 * 预测阶段，固定word对应的embedding，进行inference（可以类比是训练的一次迭代）来预测paragraph对应的embedding
 
-![](2017-05-05-doc-embedding/doc-embedding1.png)
+![](https://github.com/xiongchao/xiongchao.github.io/raw/master/_pics/2017-05-05-doc-embedding/doc-embedding1.png)
 
 ## Skip-Thought Vectors 
 
@@ -18,11 +18,11 @@ title: 句子表示
 * 使用GRU
 * decoder分别对上一句和下一句进行decode，参数独立
 
-![](https://github.com/xiongchao/xiongchao.github.io/blob/master/_pics/2017-05-05-doc-embedding/doc-embedding2.png)
+![](https://github.com/xiongchao/xiongchao.github.io/raw/master/_pics/2017-05-05-doc-embedding/doc-embedding2.png)
 
 ## DSSM
 * word hashing：用n-gram（3-gram）代替词，降维
 * 也叫sent2vec
 
-![](https://github.com/xiongchao/xiongchao.github.io/blob/master/_pics/2017-05-05-doc-embedding/doc-embedding3.png)
+![](https://github.com/xiongchao/xiongchao.github.io/raw/master/_pics/2017-05-05-doc-embedding/doc-embedding3.png)
 
